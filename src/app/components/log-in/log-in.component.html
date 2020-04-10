@@ -1,0 +1,22 @@
+<div class="log-in">
+    <div *ngIf="router?.children?.length" class="arrow-back arrowBack-icon" routerLink="/"></div>
+    <div class="contaner-center">
+        <ng-container *ngIf="!router?.children?.length">
+            <div class="title">
+                CBMobile login
+            </div>
+            <div class="container-login">
+                <button class="btn-fill" routerLink="registration" routerLinkActive="active">
+                    <span class="text-btn">registration</span>
+                </button> <br><br><br>
+                <button class="btn-fill" routerLink="sing-in" routerLinkActive="active">
+                    <span class="text-btn"> sign in</span>
+                </button>
+            </div>
+        </ng-container>
+        <div *ngIf="!apiSrv.isLoading">
+            <router-outlet></router-outlet>
+        </div>
+        <mat-spinner *ngIf="apiSrv.isLoading"></mat-spinner>
+    </div> 
+</div>

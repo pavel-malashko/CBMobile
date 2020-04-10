@@ -1,0 +1,24 @@
+<div class="chat">
+    <button class="btn-exit" (click)="logOut()">
+        <div class="exit-icon"><span class="text-btn">Exit</span></div>
+    </button>
+    <div class="chat-pos">
+        <div class="group-messages">
+            <div class="intro-title">Hello, <span>{{currentUser?.name}}!</span></div>
+            <div *ngFor="let message of dataMessages" [ngClass]="currentUser.user_id === message.user_id ? 'current-message' : 'other-message'">
+                <div class="user-title">
+                    <span class="user-text">{{message.name}}</span>
+                </div>
+                <div class="own-message">
+                    <p>
+                        {{message.text}}
+                    </p> 
+                </div>
+            </div>
+        </div>
+        <form class="sent-message" (ngSubmit)="sent()">
+            <input type="text" placeholder="Type your message here..." [formControl]="messageControl" />
+            <button type="submit" class="sent-icon"></button>
+        </form>
+    </div>
+</div>

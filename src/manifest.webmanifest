@@ -1,0 +1,27 @@
+{
+  "name": "CBMobile",
+  "short_name": "CBMobile",
+  "theme_color": "#1976d2",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+        "src": "assets/icons/ButtonSent-sm.png",
+        "sizes": "44x44"
+    },
+    {
+        "src": "assets/icons/ButtonSent-md.png",
+        "sizes": "144x144"
+    },
+    {
+        "src": "assets/icons/ExitToApp.png",
+        "sizes": "24x24"
+    },
+    {
+        "src": "assets/icons/ArrowBack.png",
+        "sizes": "24x24"
+    }
+  ]
+}

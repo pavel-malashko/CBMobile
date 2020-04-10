@@ -1,0 +1,137 @@
+.chat {
+    background-color: #FFFFFF;
+    .btn-exit {
+        width: 80px;
+        height: 40px;
+        margin: 10px;
+        position: fixed;
+        right: 0;
+        background-color: #bbbbbb;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+        .text-btn{
+            font-size: 15px;
+            color: #FFFFFF;
+            padding: 3px 0 0 26px;
+            display: block;
+        }
+        &.btn-exit:hover {
+            transform: scale(1.02)
+        } 
+        &.btn-exit:active{
+            transform: scale(.98)
+        }
+    }
+    .chat-pos {
+        padding-top: 60px;
+        width: 100vw;
+        .group-messages {
+            height: 80vh;
+            overflow: auto;
+            padding: 0 20px 20px 20px;
+            .intro-title {
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.5);
+                margin-bottom: 20px;
+                span {
+                    font-weight: bold;
+                }
+            }
+            .current-message {
+                width: 260px;
+                float: right;
+                clear: both;
+                padding-bottom: 20px;
+                .user-title {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 20px;
+                    .user-text {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 12px;
+                    }
+                }
+                .own-message {
+                        min-height: 70px;
+                        background-color: #29BBE3;
+                        border-radius: 25px;
+                        p {
+                            font-size: 15px;
+                            line-height: 18px;
+                            color: #FFFFFF;
+                            padding: 10px;
+                            margin: 0;
+                        }
+                }
+            }
+            .other-message {
+                width: 260px;
+                float: left;
+                clear: both;
+                padding-bottom: 20px;
+                .user-title {
+                    margin-left: 20px;
+                    .user-text {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 12px;
+                    }
+                }
+                .own-message {
+                    min-height: 70px;
+                    background-color: #29E3E1;
+                    border-radius: 25px;
+                    p {
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                        padding: 10px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .sent-message {
+            display: flex;
+            justify-content: center;
+            height: 44px;
+            input {
+                width: 80%;
+                height: 40px;
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                font-size: 15px;
+                padding: 10px 15px 13px 15px;
+                line-height: 18px;
+                margin-right: 10px;
+                border: 2px solid rgba(2, 2, 2, 0.2);
+            }
+            input::placeholder {
+                color: rgba(0, 0, 0, 0.5);
+            }
+            input:focus {
+                outline: none;
+                box-shadow: 0px 0px 3px #c3dbff;
+            }
+            .sent-icon {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background-image: url('../../../assets/icons/ButtonSent-sm.png');
+                outline: 0;
+                transition: all .3s;
+                cursor: pointer;
+                &.sent-icon:hover {
+                    transform: scale(1.05)
+                } 
+                &.sent-icon:active{
+                    transform: scale(.97)
+                }
+            }
+        }
+        
+       
+    }    
+}

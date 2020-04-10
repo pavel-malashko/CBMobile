@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "app/components/log-in/log-in.component";
+
+html, body {
+    height: 100%;
+}
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif; 
+}
+* {
+    box-sizing: border-box;
+    border: none;
+}
+
+.arrowBack-icon {
+    background-image: url('./assets/icons/ArrowBack.png');
+    height: 24px;
+    width: 24px;
+}
+
+.exit-icon {
+    background-image: url('./assets/icons/ExitToApp.png');
+    height: 24px;
+    width: 24px;
+}
+.danger {
+    background-color: #ff4164;
+    .mat-simple-snackbar {
+        text-align: center;
+        display: block;
+        color: white;
+    }
+}
+

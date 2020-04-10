@@ -1,0 +1,31 @@
+<div class="title">
+    sing in
+</div>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+        <div>
+            <input type="email" formControlName="email" placeholder="E-mail address" />
+            <div class="error-message"
+                *ngIf="form.controls['email'].invalid && form.controls['email'].touched && form.controls['email'].value">
+                Email invalid.
+            </div>
+            <div class="error-message"
+                *ngIf="form.controls['email'].invalid && form.controls['email'].touched && !form.controls['email'].value">
+                Email is a required field.
+            </div>
+        </div>  
+    </div>
+    <div class="form-group">
+        <div>
+            <input type="password" formControlName="password" placeholder="Password" /><br>  
+            <div class="error-message"
+                *ngIf="form.controls['password'].invalid && form.controls['password'].touched">
+                Password is a required field.
+            </div>
+        </div>
+        
+    </div>
+    <button type="submit" class="btn-fill" [disabled]="!form.valid">
+        <span class="text-btn">sign in</span>
+    </button>
+</form>
